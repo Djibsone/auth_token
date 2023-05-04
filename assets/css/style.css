@@ -16,6 +16,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     animation: slide-up 0.5s ease-out;
+    /* position: relative; */
 }
 
 @keyframes slide-up {
@@ -36,20 +37,24 @@ h1 {
 
 input[type=text], input[type=email], input[type=password] {
     width: 100%;
-    padding: 12px;
+    padding: 12px 12px 12px 35px;
     margin: 6px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: large;
 }
 
 button[type=submit] {
-    background-color: #4CAF50;
-    color: white;
+    /* background-color: #4CAF50; */
+    background-color: rgb(17, 3, 3) transparent;
+    /* color: white; */
+    color: rgb(15, 14, 14);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
+    border: 1px solid #ccc;
     cursor: pointer;
     float: right;
     transition: background-color 0.3s ease-out;
@@ -60,7 +65,6 @@ button[type=submit]:hover {
 }
 
 a {
-    
     color: rgb(221, 106, 106);
     cursor: pointer;
     text-decoration: none;
@@ -86,6 +90,37 @@ a:hover{
     user-select: none;
     padding: 10px;
 }
+.inputIcon {
+    margin: 15px 0 15px 0;
+    position: relative;
+}
+
+.inputIcon i {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    font-size: 20px;
+    padding: 9px 8px;
+    color: #ccc;
+}
+
+.inputIcon input[type=text]:focus + i,
+.inputIcon input[type=email]:focus + i,
+.inputIcon input[type=password]:focus + i {
+  color: rgb(10, 10, 10);
+} 
+
+.eye {
+    position: absolute;
+    right: 45px;
+    top: 2px;   
+}
+
+.inputIcon .eye i:hover {
+    cursor: pointer;
+    color: rgb(10, 10, 10);
+  }
+
 
 @media screen and (max-width: 768px) {
     .container {
