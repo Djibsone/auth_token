@@ -110,6 +110,20 @@ a:hover{
   color: rgb(10, 10, 10);
 } 
 
+.inputIcon input[type=password]:focus + .fa-lock + .eye i,
+.inputIcon input[type=password]:active + .fa-lock + .eye i {
+  color: rgb(10, 10, 10);
+}
+
+/* faire danser le eye c-a-d faire des va-et-vient
+.eye::before {
+    content: "";
+  }
+  
+  .eye:hover::before {
+    content: "Password";
+  } */
+
 .eye {
     position: absolute;
     right: 45px;

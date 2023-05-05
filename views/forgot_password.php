@@ -45,8 +45,8 @@
 				<input type="password" id="confirm_password" name="confirm_password" placeholder="***********">
 				<i class="fa fa-lock"></i>
 				<span class="eye">
-					<i class="fa fa-eye" id="h1"></i>
-					<i class="fa fa-eye-slash" id="h12"></i>
+					<i class="fa fa-eye"></i>
+					<i class="fa fa-eye-slash"></i>
 				</span>	
 			<div>
 			<br>

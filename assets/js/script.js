@@ -1,4 +1,4 @@
-const eye = document.querySelector(".fa-eye");
+/*const eye = document.querySelector(".fa-eye");
 const eyeslash = document.querySelector(".fa-eye-slash");
 const passwordField = document.querySelector("input[type=password]");
 
@@ -12,25 +12,28 @@ eyeslash.addEventListener("click", () => {
   eye.style.display = "block";
   eyeslash.style.display = "none";
   passwordField.type = "text";
+});*/
+
+
+const eye = document.querySelectorAll(".fa-eye");
+const eyeslash = document.querySelectorAll(".fa-eye-slash");
+const passwordFields = document.querySelectorAll("input[type=password]");
+
+eye.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    eyeslash[index].style.display = "block";
+    item.style.display = "none";
+    passwordFields[index].type = "password";
+  });
+});
+
+eyeslash.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    item.style.display = "none";
+    eye[index].style.display = "block";
+    passwordFields[index].type = "text";
+  });
 });
 
 
-// partie 2
-
-  const h1 = document.getElementById("h1");
-  const h2 = document.getElementById("h2");
-  const password = document.querySelector("input[type=password]");
-  
-  h1.addEventListener("click", () => {
-      h1.style.display = "block";
-      h2.style.display = "none";
-      password.type = "password";
-  });
-  
-  h2.addEventListener("click", () => {
-      h2.style.display = "block";
-      h1.style.display = "none";
-      password.type = "text";
-  });
-  
 
